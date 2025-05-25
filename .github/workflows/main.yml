@@ -1,0 +1,20 @@
+name: CI/CD Test with Email
+
+on:
+  workflow_dispatch: # Allow manual triggering
+  push: # Trigger on push
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: 23f3001331@ds.study.iitm.ac.in - Setup Environment
+      run: echo "Setting up environment..."
+
+    - name: Test Run
+      run: echo "Hello World"
